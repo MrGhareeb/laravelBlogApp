@@ -1,0 +1,92 @@
+:root{
+    --myBlue: rgb(52, 60, 68);
+    --myLightBlue :rgb(240, 248, 255);
+    --myCardColor :rgb(251, 253, 255);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--myLightBlue);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.navigation{
+    padding: 0.5rem;
+    background-color: rgb(249, 252, 255);
+    border-radius: 0.4rem;
+    box-shadow: 0 0 2rem 1px rgb(207, 216, 223);
+}
+
+.navigation ul{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    list-style-type: none;
+}
+.navigation ul li{
+    margin: 0 0.5rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 1rem;
+    padding: 1.5rem;
+    background-color: rgb(249, 252, 255);
+    border-radius: 0.4rem;
+    box-shadow: 0 0 2rem 1px rgb(207, 216, 223);
+}
+
+.card{
+    max-width: 1080px;
+    min-width: 50%;
+    margin: 0.5rem;
+    padding: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.6rem;
+    box-shadow: 0 0 1.5rem 1px rgb(199, 211, 221);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    transition: all 0.2s;
+}
+
+.card:hover{
+    transform: scale(1.05) ;
+}
+
+.card-no-hover{
+    max-width: 100%;
+    margin: 1rem;
+    padding: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.6rem;
+    box-shadow: 0 0 1.5rem 1px rgb(199, 211, 221);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+}
+
+/* Form */
+
+input {
+    border: none;
+    border-style: solid;
+    border-color: rgb(217, 229, 240);
+    border-width: 2px;
+    padding: 0.4rem;
+    border-radius: 0.3rem;
+}
+
+input[type="submit" i] {
+    background-color: aliceblue;
+}
