@@ -65,7 +65,9 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $posts = DB::select("select * from posts where id = ?", [$id]);
+        $post = $posts[0];
+        return view("editPost", ["id"=> $id,"title"=> $post->title, "body"=> $post->body]);
     }
 
     /**
@@ -78,6 +80,11 @@ class PostController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $title = $request->post('title');
+        $body = $request->post('body');
+        DB::update('update posts set title = :title, body= :body where id = :id', ["title"=>$title,"body"=>$body,"id"=>$id]);
+        return redirect()->route('home');
+        
     }
 
     /**
